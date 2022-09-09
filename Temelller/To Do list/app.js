@@ -172,16 +172,295 @@
 
 // <a id = "clear-todos" class="btn btn-dark" href="#">Tüm Taskları Temizleyin</a>      
 
-const newLink = document.createElement("a");
-const cardbody = document.getElementsByClassName("card-body") [1];
+// const newLink = document.createElement("a");
+// const cardbody = document.getElementsByClassName("card-body") [1];
 
-newLink.id = "clear-todos";
-newLink.className = "btn btn-danger";
-newLink.href = "https://www.google.com.tr";
-newLink.target = "_blank" ;
+// newLink.id = "clear-todos";
+// newLink.className = "btn btn-danger";
+// newLink.href = "https://www.google.com.tr";
+// newLink.target = "_blank" ;
 
-// Text Content
+// // // Text Content
+
+// // // cardbody.textContent = "jwsjajajjaja"
+
+// // // Text Node 
+
+// // const text = document.createTextNode("Naber");
+// // cardbody.appendChild(text);
+// // console.log(cardbody);
+
+// newLink.appendChild(document.createTextNode("Farklı Sayfaya Git"));
+
+// cardbody.appendChild(newLink);
+
+// console.log(newLink);
 
 
 
-console.log(newLink);
+// Dinamik Element Silme
+
+
+// const todoList = document.querySelector("ul.list-group");
+// const todos = document.querySelectorAll("li.list-group-item");
+
+// Remove Metodu
+
+// todos[0].remove();
+
+// Remove Child
+
+// todoList.removeChild(todoList.lastElementChild);
+// todoList.removeChild(todos[3]);
+
+// console.log(todos);
+// console.log(todoList);
+
+
+// REPLACE 
+// <h5 class="card-title" id = "tasks-title">Todolar</h5> 
+// const cardbody = document.querySelectorAll(".card-body")[1]; 
+
+// const newElement = document.createElement("h3");
+
+// newElement.className = "card-title";
+// newElement.id = "tasks-title";
+// newElement.textContent = "Yeni Todolar";
+
+// // Eski Element
+
+// const oldElement = document.querySelector("#tasks-title");
+
+// cardbody.replaceChild(newElement, oldElement);
+
+// console.log(cardbody);
+
+
+// const todoInput = document.getElementById("todo");
+// let element;
+
+
+// element = todoInput;
+// element = todoInput.classList;
+
+// todoInput.classList.add("newClass");
+// todoInput.classList.add("newClass2");
+// todoInput.classList.remove("form-control");
+
+
+// element = todoInput;
+// element = todoInput.placeholder;
+// element = todoInput.getAttribute("placeholder");
+// todoInput.setAttribute("placeholder","Naber");
+// todoInput.setAttribute("title","Input");
+// todoInput.removeAttribute("name");
+
+// element = todoInput;
+// // element = todoInput.hasAttribute("name");
+
+// console.log(element);
+
+//   const filterInput = document.getElementById("filter");
+//   const todoform = document.getElementById("todo-form");
+
+//   todoform.addEventListener("submit",submitform);
+
+//   function submitform(e){
+
+//     console.log("Submit Eventi");
+
+
+//     e.preventDefault();
+
+
+//   }
+
+
+// filterInput.addEventListener("focus",function(e){
+
+//     console.log(e);
+//     console.log(e.type);
+//     console.log(e.target);
+//     console.log(e.target.placeholder);
+//     console.log(e.target.className);
+
+//     // console.log("Naber");
+
+
+// });
+// filterInput.onfocus = function(){
+//     console.log("Naber");
+// }
+
+
+// Klavye Eventleri
+//  const header = document.querySelector(".card-header");
+//  const todoInput = document.querySelector("#todo");
+
+//  todoInput.addEventListener("keyup",changeText);
+
+//  function changeText(e){
+//     header.textContent= e.target.value;
+ //console.log(e.target.value);
+//  }
+
+
+//keypress
+// document.addEventListener("keypress",run);
+
+// function run(e){
+//     // console.log(e.which);
+//     console.log(e.key);
+// }
+
+// keydown
+// document.addEventListener("keydown",run);
+
+// function run(e){
+//     //console.log(e.which);
+//     console.log(e.key);
+// }
+
+//keyup
+
+// document.addEventListener("keyup",run);
+
+// function run(e){
+//     //console.log(e.which);
+//     console.log(e.key);
+// }  
+
+
+// const cardbody = document.querySelectorAll(".card-body")[1];
+
+// const title = document.querySelector("#tasks-title");
+
+// Click Event
+// title.addEventListener("click",run);
+// Double Click
+// title.addEventListener("dblclick",run);
+
+// Mouse Down
+// title.addEventListener("mousedown",run);
+// Mouse Up
+// title.addEventListener("mouseup",run);
+
+// Mouse Over
+// title.addEventListener("mouseover",run);
+// // Mouse Out
+// title.addEventListener("mouseout",run);
+
+// cardbody.addEventListener("mouseover",run);
+// cardbody.addEventListener("mouseout",run);
+
+// Mouse Enter ve Mouse Leave
+
+// cardbody.addEventListener("mouseenter",run);
+// cardbody.addEventListener("mouseleave",run);
+
+
+// function run(e) {
+//   console.log(e.type);
+// }
+
+// Input Eventleri
+
+// const filter = document.getElementById("filter");
+
+// document.addEventListener("DOMContentLoaded",load);
+
+// function load(e){
+//   console.log("Sayfa Yüklendi");
+// }
+
+// // Focus 
+// filter.addEventListener("focus",run);
+// // Blur
+// filter.addEventListener("blur",run);
+
+// Paste
+// filter.addEventListener("paste",run);
+// Copy 
+// filter.addEventListener("copy",run);
+
+// Cut 
+// filter.addEventListener("cut",run);
+
+// Select
+// filter.addEventListener("select",run);
+
+
+// function run(e) {
+//   console.log(e.type);
+
+// }
+
+
+// Event Bubbling
+
+// document.querySelector(".container").addEventListener("click",function(){
+// console.log("Div Container");
+
+// });
+
+// document.querySelector(".card-row").addEventListener("click",function(){
+//   console.log("Card Row");
+  
+//   });
+
+//   document.querySelector(".card-body")[1].addEventListener("click",function(){
+//     console.log("Card Body");
+    
+//     });
+
+// Event Capturing veya Delegation
+
+//  const cardbody = document.querySelectorAll(".card-body")[1];
+
+//  cardbody.addEventListener("click",run);
+
+//  function run(e){
+//   if (e.target.className === "fa fa-remove"){
+//     console.log("Silme İşlemi");
+//   }
+//   if (e.target.id === "filter") {
+//     console.log("Filtreleme İşlemi");
+//   }
+//   if(e.target.id === "clear-todos") {
+//     console.log("Tüm taskları silme işlemi");
+
+//   }
+
+//   // console.log(e.target);
+
+//  }
+
+
+// Local Storage
+
+// SetItem 
+
+// localStorage.setItem("hareket","burpee");
+// localStorage.setItem("tekrar", 50);
+
+// Get Item
+
+// const value = localStorage.getItem("tekrar");
+// console.log(value);
+// console.log(typeof value);
+
+// Clear Local Storage
+
+// localStorage.setItem("hareket", "burpee");
+// localStorage.setItem("tekrar", 50);
+
+// console.log(localStorage.getItem("sport"));
+
+if(localStorage.getItem("sport") === null){
+    console.log("Sorguladığınız veri bulunmuyor");
+
+}
+else {
+    console.log("Sorguladığınız veri bulunmuyor");
+    
+}
